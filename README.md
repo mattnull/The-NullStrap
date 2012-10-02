@@ -6,6 +6,7 @@ This is my Node.js bootstrap application. This is what I use in almost all of th
 <h2>Includes</h2>
 <ul>
 <li>Express.js</li>
+<li>Connect</li>
 <li>MongoJS</li>
 <li>Mustache Templating Engine</li>
 <li>File System</li>
