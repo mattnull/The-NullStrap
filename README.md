@@ -11,4 +11,5 @@ My Node.js bootstrap application. This is what I use in almost all of the Node.j
 <li>File System</li>
 <li>Socket.io</li>
 <li>Uglify</li>
+<li>getJSON</li>
 </ul>
