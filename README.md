@@ -7,7 +7,7 @@ This is my Node.js bootstrap application. This is what I use in almost all of th
 <ul>
 <li>Express.js</li>
 <li>MongoJS</li>
-<li>Mustache Templating Library</li>
+<li>Mustache Templating Engine</li>
 <li>File System</li>
 <li>Socket.io</li>
 <li>Uglify</li>
