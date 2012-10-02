@@ -1,6 +1,7 @@
 /**
  * The NullStrap 2012
  * @author Matt Null
+ * http://github.com/mattnull/The-NullStrap
  */
 
 var express = require('express')
