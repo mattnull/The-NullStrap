@@ -1,5 +1,5 @@
 /**
- * TechSavvy 2012
+ * The NullStrap 2012
  * @author Matt Null
  */
 
@@ -102,7 +102,7 @@ io.configure('production', function(){
 
 //Mongo DB Server
 var mongoDBUrl = '';
-var mongoCollections = [;
+var mongoCollections = [];
 var db = require('mongojs').connect(dbUrl, collections);
 
 //start the server
@@ -119,6 +119,5 @@ app.get('/', function(req, res){
 io.sockets.on('connection', function(socket){
 
 });
-
 
 console.log("Express server listening on port 3333");
