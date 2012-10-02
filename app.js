@@ -12,6 +12,7 @@ var express = require('express')
 , io = require('socket.io').listen(server)
 , mu = require('mu2')
 , rest = require('getjson')
+, mongo = require('mongojs')
 , fs = require('fs')
 , env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development'
 , render = function(view, data, callback){
@@ -43,7 +44,7 @@ app.configure('production', function(){
 	mu.root = __dirname + '/views';
 
 	app.use(connect.cookieParser());
-	app.use(connect.session({ secret: '', cookie: { maxAge: 3600000}})); //1 hour sessions
+	app.use(connect.session({ secret: 'REPLACE WITH YOUR SECRET', cookie: { maxAge: 3600000}})); //1 hour sessions
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
 	app.use(express.static(__dirname + '/public'));
@@ -54,7 +55,7 @@ app.configure('development', function(){
 	mu.root = __dirname + '/views';
 
 	app.use(connect.cookieParser());
-	app.use(connect.session({ secret: '', cookie: { maxAge: 3600000}})); //1 hour sessions
+	app.use(connect.session({ secret: 'REPLACE WITH YOUR SECRET', cookie: { maxAge: 3600000}})); //1 hour sessions
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
 	app.use(express.static(__dirname + '/public'));
@@ -106,7 +107,7 @@ io.configure('production', function(){
 //Mongo DB Server
 var mongoDBUrl = '';
 var mongoCollections = [];
-var db = require('mongojs').connect(dbUrl, collections);
+var db = mongoDBUrl && mongoCollections.length ? mongo.connect(mongoDBUrl, mongoCollections) : {};
 
 //start the server
 server.listen(3333);
@@ -115,7 +116,9 @@ server.listen(3333);
 
 //index
 app.get('/', function(req, res){	
-
+	render('index.html', {}, function(html){
+		res.send(html);
+	});
 });
 
 //Attach socket events
