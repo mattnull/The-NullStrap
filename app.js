@@ -26,10 +26,12 @@ var express = require('express')
 		var buffer = '';
 
 		mu.render(parsed, data)
-		  .on('data', function (c) { buffer += c.toString(); })
-		  .on('end', function () {
-		  		callback(buffer); 
-		  });
+		.on('data', function (c) { 
+			buffer += c.toString(); 
+		})
+		.on('end', function () {
+			callback(buffer); 
+		});
 	});
 }
 , uglify = require('uglify-js')
