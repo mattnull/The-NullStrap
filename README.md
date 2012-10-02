@@ -12,4 +12,5 @@ This is my Node.js bootstrap application. This is what I use in almost all of th
 <li>Socket.io</li>
 <li>Uglify</li>
 <li>getJSON</li>
+<li>Crypto</li>
 </ul>
