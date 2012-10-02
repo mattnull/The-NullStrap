@@ -1,0 +1,21 @@
+{
+  "name": "NullStrap",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "app.js"
+  },
+  "dependencies": {
+    "express": "3.0.0rc4",
+    "getjson": "0.0.x",
+    "mu2": "0.5.x",
+    "uglify-js": "1.3.x",
+    "mongojs": "0.4.x",
+    "socket.io": "0.9.x",
+    "connect": "2.4.x"
+  },
+  "engines": {
+    "node": "0.8.x"
+  },
+  "bundleDependencies": []
+}
