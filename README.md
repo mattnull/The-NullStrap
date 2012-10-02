@@ -13,4 +13,5 @@ This is my Node.js bootstrap application. This is what I use in almost all of th
 <li>Uglify</li>
 <li>getJSON</li>
 <li>Crypto</li>
+<li>Gzippo</li>
 </ul>
