@@ -104,7 +104,7 @@ io.configure('production', function(){
 	]);
 });
 
-//Mongo DB Server
+//MongoDB Server
 var mongoDBUrl = '';
 var mongoCollections = [];
 var db = mongoDBUrl && mongoCollections.length ? mongo.connect(mongoDBUrl, mongoCollections) : {};
